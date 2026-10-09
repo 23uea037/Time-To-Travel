@@ -11,7 +11,7 @@ import './index.css';
 function App() {
   return (
     <Router>
-  <div className="app">
+      <div className="app">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,6 +20,22 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
+        <footer className="site-footer">
+          <div className="container footer-inner">
+            <div>
+              <h3>Time To Travel</h3>
+              <p>Curated journeys for memorable escapes.</p>
+            </div>
+            <div className="footer-links">
+              <a href="/">Home</a>
+              <a href="/destinations">Destinations</a>
+              <a href="/tours">Tours</a>
+              <a href="/about">About</a>
+              <a href="/contact">Contact</a>
+            </div>
+          </div>
+        </footer>
       </div>
     </Router>
   );

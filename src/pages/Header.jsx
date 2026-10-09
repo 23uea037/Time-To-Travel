@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <Link to="/" className="logo">Time To Travel</Link>
-        
+
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -21,14 +21,16 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <button className="search-btn"><FiSearch style={{ color: '#fff' }} /></button>
-          <button className="cart-btn"><FiShoppingCart style={{ color: '#fff' }} /></button>
-          <button className="user-btn"><FiUser style={{ color: '#fff' }} /></button>
-          <button 
-            className="menu-toggle" 
+          <button className="search-btn" aria-label="Search"><FiSearch /></button>
+          <button className="cart-btn" aria-label="Cart"><FiShoppingCart /></button>
+          <button className="user-btn" aria-label="Profile"><FiUser /></button>
+          <button className="primary-header-btn">Plan a trip</button>
+          <button
+            className="menu-toggle"
+            aria-label="Toggle navigation"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FiX style={{ color: '#fff' }} /> : <FiMenu style={{ color: '#fff' }} />}
+            {isMenuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
